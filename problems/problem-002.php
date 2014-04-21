@@ -13,21 +13,27 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 
 */
 
-function threeFive(){
-	$base = 0;
-	for ($i = 1; $i < 1000; $i++){
-		if($i%3 === 0 || $i%5 === 0){
-			$base = $base + $i;
+function fibonacci_evenSum($end){ //set $end point for function
+	//set variables
+	$fib1 = 1;
+	$fib2 = 2;
+	$fib3 = '';
+	$sequence = array();
+	//echo first even number
+	array_push($sequence, $fib2);
+
+	while ($fib1 + $fib2 < $end) {
+		$fib3 = $fib1 + $fib2;
+		if($fib3 % 2 === 0){
+			array_push($sequence, $fib3);
 		}
+		$fib1 = $fib2;
+		$fib2 = $fib3;
 	}
-	echo $base;
-	
+	echo array_sum($sequence);
 }
 
 ?>
-
-
-
 
 <!-- *********DISPLAY********** -->
 <h2>problem 2</h2>
@@ -42,11 +48,31 @@ function threeFive(){
 <hr><!-- *****CODE***** -->
 
 <code class="language-php"><pre class="line-numbers">
+function fibonacci_evenSum($end){ //set $end point for function
+	//set variables
+	$fib1 = 1;
+	$fib2 = 2;
+	$fib3 = '';
+	$sequence = array();
+	//echo first even number
+	array_push($sequence, $fib2);
 
+	while ($fib1 + $fib2 < $end) {
+		$fib3 = $fib1 + $fib2;
+		if($fib3 % 2 === 0){
+			array_push($sequence, $fib3);
+		}
+		$fib1 = $fib2;
+		$fib2 = $fib3;
+	}
+	echo array_sum($sequence);
+}
+
+fibonacci_evenSum(4000000);
 </pre></code>
 <hr><!-- *****OUTPUT***** -->
 <?php 
 
-
+fibonacci_evenSum(4000000);
 
  ?>
