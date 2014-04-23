@@ -1,6 +1,7 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="/assets/js/prism.js"></script>
 <link rel="stylesheet" href="/assets/css/prism.css">
+<a href="/index.php">Home</a>
 <?php
 /*
 *************problem 2****************
