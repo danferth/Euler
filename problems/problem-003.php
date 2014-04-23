@@ -15,7 +15,6 @@ What is the largest prime factor of the number 600851475143 ?
 function prime_factors($test){
 	$result = array();
 	$primes = array();
-	//set_time_limit(0); to stop browser from timing out
 	set_time_limit(0);
 	//find multiples of $test 
 	for ($check = 2; $check < $test ; $check++) { 
@@ -23,25 +22,43 @@ function prime_factors($test){
 			array_push($result, $check);
 		}
 	}
+	echo 'Done with factoring';
+	flush();
 	//check which array values are prime and put into new array
 	foreach ($result as $key => $value) {
 			
-		$counter = 0;
-		for ($check=1; $check <= $value; $check++) { 
-			if ($value % $check == 0) {
-				$counter++;
+		//if not 1 then continue
+		if ($value != 1) {	
+			//2 is the only even prime number
+			if ($value == 2) {
+				array_push($primes, $value);
+				continue;
 			}
-		}
-		if ($counter == 2) {
-			array_push($primes, $value);
+			if ($value == 3) {
+				array_push($primes, $value);
+				continue;
+			}
+			if ($value == 5) {
+				array_push($primes, $value);
+				continue;
+			}
+			if ($value % 2 != 0) {
+				$count = 0;
+				for ($check = 3; $check <= ceil(sqrt($value)); $check = $check + 2) { 
+					if ($value % $check == 0) {
+						$count++;
+					}
+				}
+				if ($count == 0) {
+				array_push($primes, $value);
+				}
+			}
 		}
 	}
 	//output array of prime multiples
 	echo '<pre>';
-	print_r($primes);
+	print_r($result);
 	echo '</pre>';
-	//push output to the borwser
-	flush();
 
 }
 
