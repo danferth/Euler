@@ -1,6 +1,8 @@
 <h1>EulerSolutions</h1>
 
 <p>Using <a href="http://projecteuler.net/">project Euler</a> as a way to make the brain think outside of the normal paradigm.</p>
+
+<p>The folder <i>cmd</i> contains <i>PHP</i> files that can be run from the command line</p>
 <hr>
 <h3>Problems</h3>
 <ol>
