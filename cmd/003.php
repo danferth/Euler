@@ -29,9 +29,9 @@ function isPrime($test){
 	}
 
 	if ($count > 0) {
-		echo 'NOT prime'.PHP_EOL;
+		return false;
 	}else{
-		echo 'prime'.PHP_EOL;
+		return true;
 	}
 }
 
@@ -39,9 +39,6 @@ function isPrime($test){
 function prime_factors($test){
 	$start_t = time();
 	$half = ceil($test/2);
-	if ($test % 2 == 0) {
-		echo '2'.PHP_EOL;
-	}
 	//find multiples of $test 
 	for ($check = 3; $check <= $half; $check = $check + 2) { 
 		if ($test % $check == 0) {
