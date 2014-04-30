@@ -1,5 +1,5 @@
 <?php
-include dirname().'../assets/class/time.php';
+include dirname('../').'./assets/class/time.php';
 /*
 *************problem 3****************
 

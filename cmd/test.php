@@ -1,7 +1,7 @@
 <?php
-include dirname().'../assets/class/time.php';
+include dirname('../').'./assets/class/time.php';
 
-function test($test){
+function test(){
 $time = new time();
 
 
