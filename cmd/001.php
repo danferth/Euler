@@ -1,5 +1,5 @@
-
 <?php
+include dirname().'../assets/class/time.php';
 /*
 *************problem 1****************
 
@@ -10,6 +10,7 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 */
 
 function threeFive(){
+	$time = new time();
 	$base = 0;
 	for ($i = 1; $i < 1000; $i++){
 		if($i%3 === 0 || $i%5 === 0){
@@ -17,6 +18,7 @@ function threeFive(){
 		}
 	}
 	echo $base.PHP_EOL;
+	$time->end();
 	
 }
 

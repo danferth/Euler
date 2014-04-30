@@ -1,4 +1,5 @@
 <?php
+include dirname().'../assets/class/time.php';
 /*
 *************problem 7****************
 
@@ -9,6 +10,7 @@ What is the 10 001st prime number?
 */
 
 function prime_up_to($limit){
+	$time = new time();
 	$result = array();
 	//add start to [0] so first prime number (2) is [1] in the array
 	array_push($result, 'start');
@@ -43,6 +45,7 @@ function prime_up_to($limit){
 	}
 	//output 10,001st prime number
 	echo $result['10001'].PHP_EOL;
+	$time->end();
 }
 
 

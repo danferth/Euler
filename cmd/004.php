@@ -1,4 +1,5 @@
 <?php
+include dirname().'../assets/class/time.php';
 /*
 *************problem 4****************
 
@@ -28,5 +29,12 @@ possible solution would be to:
 4. output the array
 
 */
+function test($test){
+	$time = new time();
+	
 
+	$time->end();
+}
+
+test(123456789);
  ?>

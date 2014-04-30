@@ -1,4 +1,5 @@
 <?php
+include dirname().'../assets/class/time.php';
 /*
 *************problem 2****************
 
@@ -11,6 +12,7 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 */
 
 function fibonacci_evenSum($end){ //set $end point for function
+	$time = new time();
 	//set variables
 	$fib1 = 1;
 	$fib2 = 2;
@@ -28,6 +30,7 @@ function fibonacci_evenSum($end){ //set $end point for function
 		$fib2 = $fib3;
 	}
 	echo array_sum($sequence).PHP_EOL;
+	$time->end();
 }
 
 fibonacci_evenSum(4000000);

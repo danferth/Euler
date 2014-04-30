@@ -1,4 +1,5 @@
 <?php
+include dirname().'../assets/class/time.php';
 /*
 *************problem 3****************
 
@@ -37,7 +38,7 @@ function isPrime($test){
 
 
 function prime_factors($test){
-	$start_t = time();
+	$time = new time();
 	$half = ceil($test/2);
 	//find multiples of $test 
 	for ($check = 3; $check <= $half; $check = $check + 2) { 
@@ -47,22 +48,7 @@ function prime_factors($test){
 			}
 		}
 	}
-
-	$end_t = time();
-	$total_t = $end_t - $start_t;
-	if ($total_t < 60) {
-	echo 'time to complete: '.$total_t.' sec'.PHP_EOL;
-	}
-	if ($total_t > 61 && $total_t < 3599) {
-		$new_total = $total_t/60;
-		echo 'time to complete: '.$new_total.'min'.PHP_EOL;
-	}
-	if ($total_t > 61 && $total_t > 3599) {
-		$minutes = $total_t/60;
-		$hours = $minutes/60;
-		echo 'time to complete: '.$hours.' hours'.PHP_EOL;
-	}
-
+	$time->end();
 }
 
 prime_factors(600851475143);
