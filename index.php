@@ -9,7 +9,8 @@
 
 <li><a href="/problems/problem-001.php">Multiples of 3 & 5</a></li>
 <li><a href="/problems/problem-002.php">Even Fibonacci Numbers</a></li>
-<li><a href="/problems/problem-003.php">Largest prime factor*</a></li>
+<li><a href="/problems/problem-003.php">Largest prime factor</a></li>
+<li><a href="/problems/problem-004.php">Largest palindrome product*</a></li>
 <li><a href="/problems/problem-007.php">10001st prime</a></li>
 </ol>
 <p style="color:#666; font-size:11px;">* denotes current working problem. this means it is probably not solved as of yet</p>

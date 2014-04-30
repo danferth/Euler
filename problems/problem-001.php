@@ -2,33 +2,7 @@
 <script src="/assets/js/prism.js"></script>
 <link rel="stylesheet" href="/assets/css/prism.css">
 <a href="/index.php">Home</a>
-<?php
-/*
-*************problem 1****************
 
-If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
-
-Find the sum of all the multiples of 3 or 5 below 1000.
-
-*/
-
-function threeFive(){
-	$base = 0;
-	for ($i = 1; $i < 1000; $i++){
-		if($i%3 === 0 || $i%5 === 0){
-			$base = $base + $i;
-		}
-	}
-	echo $base;
-	
-}
-
-?>
-
-
-
-
-<!-- *********DISPLAY********** -->
 <h2>problem 1</h2>
 <h4>Multiples of 3 and 5</h4>
 <hr>
@@ -51,9 +25,3 @@ function threeFive(){
 
 threeFive();
 </pre></code>
-<hr><!-- *****OUTPUT***** -->
-<?php 
-
-threeFive();
-
- ?>

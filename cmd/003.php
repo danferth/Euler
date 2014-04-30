@@ -1,6 +1,6 @@
 <?php
 /*
-*************problem 2****************
+*************problem 3****************
 
 The prime factors of 13195 are 5, 7, 13 and 29.
 
@@ -23,7 +23,7 @@ function isPrime($test){
 
 	//now compair $test to all odd numbers between 3 and sqrt or $test
 	for ($check = 3; $check <= $limit; $check = $check + 2) { 
-		if ($test % $check == 0) {
+		if (fmod($test , $check) == 0) {
 			$count++;
 		}
 	}
@@ -41,7 +41,7 @@ function prime_factors($test){
 	$half = ceil($test/2);
 	//find multiples of $test 
 	for ($check = 3; $check <= $half; $check = $check + 2) { 
-		if ($test % $check == 0) {
+		if (fmod($test , $check) == 0) {
 			if (isPrime($check)) {
 				echo $check.PHP_EOL;
 			}

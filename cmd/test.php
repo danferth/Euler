@@ -16,7 +16,7 @@ function isPrime($test){
 
 	//now compair $test to all odd numbers between 3 and sqrt or $test
 	for ($check = 3; $check <= $limit; $check = $check + 2) { 
-		if ($test % $check == 0) {
+		if (fmod($test , $check) == 0) {
 			echo 'check '.$check.PHP_EOL;
 			$count++;
 		}
@@ -52,8 +52,10 @@ function isPrime($test){
 	}
 }
 
-isPrime(4289864465);
+isPrime(4294967297);
+//4000000000
+//4294967297
 
-//4289864465
+
 
  ?>
