@@ -5,8 +5,6 @@ function test(){
 $time = new time();
 
 
-
-
 $time->end();
 }
 

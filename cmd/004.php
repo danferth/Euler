@@ -9,32 +9,56 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 
 */
 
-/*
+function is_palindromic($str){
+	//get str length
+	$length = strlen($str);
+	//is length even?
+	if ($length % 2 == 0) {
+		//find mid point
+		$half_length = $length/2;
+		//split string down the middle and put into array
+		$str_array = str_split($str , $half_length);
+		//reverse second half of string
+		$rev_str = strrev($str_array['1']);
+		$str_a = $str_array['0'];
+		$str_b = $rev_str;
+		//are the two halves equal
+		if ($str_a === $str_b) {
+			return true;
+		}else{
+			return false;
+		}
+	}
+}
 
-possible solution would be to:
-
-1. set variables for two numbers each '999' being the largest number in a three digit number.
-
-2. a loop to multiply the two numbers and store the products in an array
-
-3. compare the values by getting:
-
-	a. get length
-	b. is is even 9odd can not be a palindromic number)
-	c. devide the value into two sections
-	d. reverse one of them.
-	e. compare for similarity
-	f. if equal store the value in an array
-
-4. output the array
-
-*/
-function test($test){
+function three_digit(){
 	$time = new time();
-	
+	$num1 = 100;
+	$num2 = 100;
+	$result = array();
+	while ($num1 <= 999) {
+		for ($num2 = 100; $num2 <= 999; $num2++) { 
+			$test = $num1 * $num2;
+			if (is_palindromic($test)) {
+				array_push($result, $test);
+			}
+		}
+		$num1++;
+	}
+	$limit = count($result)-1;
+	$count = 1;
+	$compare = $result['0'];
+	while ($count <= $limit) {
+		if ($compare < $result[$count]) {
+			$compare = $result[$count];
+		}
+		$count++;
+	}
+
+	echo $compare . PHP_EOL;
 
 	$time->end();
 }
 
-test(123456789);
+three_digit();
  ?>
