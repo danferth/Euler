@@ -12,14 +12,22 @@ What is the smallest positive number that is evenly divisible by all of the numb
 function smallest_multiple(){
 	$time = new time();
 	$test = 20;
-	$answer;
+	$answer = '';
 	$count = 0;
-	for ($i=1; $i <= 20; $i++) { 
-		while ($count > 0) {
-			
+
+	while ($count < 20) {
+		for ($i=1; $i <= 20; $i++) { 
+			if (fmod($test, $i) == 0) {
+				$count++;
+			}
+		}
+		if ($count < 20) {
+			$count = 0;
+			$test = $test + 2;
+		}elseif ($count == 20){
+			$answer = $test;
 		}
 	}
-
 	echo $answer . PHP_EOL;
 	$time->end();
 }
