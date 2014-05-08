@@ -14,6 +14,7 @@
 <li><a href="/problems/problem-005.php">Smallest multiple</a></li>
 <li><a href="/problems/problem-006.php">Sum square difference</a></li>
 <li><a href="/problems/problem-007.php">10001st prime</a></li>
-<li><a href="/problems/problem-008.php">Largest product in a series*</a></li>
+<li><a href="/problems/problem-008.php">Largest product in a series</a></li>
+<li><a href="/problems/problem-009.php">Special Pythagorean triplet*</a></li>
 </ol>
 <p style="color:#666; font-size:11px;">* denotes current working problem. this means it is probably not solved as of yet</p>
